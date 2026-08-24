@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
   const subject = document.getElementById("field-subject").value;
   const email = document.getElementById("field-email").value;
 
-  const body = `Meu nome é ${name} e eu tenho ${subject} que precisa de ajuda. Você pode me encontrar em ${email}.`;
+  const body = `Meu nome é ${name} e quero falar sobre ${subject}. Você pode me encontrar em ${email}.`;
 
   const mailto = `mailto:thiagodutrasap@gmail.com?subject=${encodeURIComponent(
     "Contato pelo portfólio - " + name,
