@@ -132,10 +132,9 @@ body {
 }
 
 .contact-hero {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 60px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .contact-note {
@@ -295,11 +294,6 @@ body {
 
   .contact-card {
     padding: 36px;
-  }
-
-  .contact-hero {
-    grid-template-columns: 1fr;
-    gap: 30px;
   }
 }
 
