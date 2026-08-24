@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* cores e variaveis do site */
+:root {
+  --background: #0b0b0b;
+  --text-primary: #f5f5f5;
+  --text-secondary: #999999;
+  --text-muted: #666666;
+  --border: #292929;
+  --border-hover: #515151;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* menu do topo (igual ao da home) */
+.header {
+  width: 100%;
+}
+
+.navbar {
+  width: min(calc(100% - 80px), 1080px);
+  height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo span {
+  color: #777777;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #8b8b8b;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--text-primary);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+/* conteudo da pagina */
+.page {
+  width: min(calc(100% - 80px), 1080px);
+  margin: 0 auto;
+  padding: 60px 0 100px;
+}
+
+.section-label {
+  color: #8b8b8b;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.page h1 {
+  font-size: clamp(34px, 4vw, 46px);
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* card principal */
+.contact-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #131313, #0d0d0d);
+  padding: 56px;
+}
+
+.contact-hero {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-note {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* frase pra preencher */
+.mad-lib p {
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.55;
+  font-weight: 600;
+  color: #c9c9c9;
+}
+
+.mad-lib input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--border-hover);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0 4px 2px;
+  margin: 0 2px;
+  width: clamp(140px, 24vw, 300px);
+  transition: border-color 0.2s ease;
+}
+
+.mad-lib input::placeholder {
+  color: #666666;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.mad-lib input:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.mad-lib input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-primary);
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.send-btn {
+  margin-top: 34px;
+  height: 42px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: #111111;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.send-btn:hover {
+  background: #dddddd;
+  border-color: #dddddd;
+  transform: translateY(-1px);
+}
+
+/* rodape do card */
+.contact-footer {
+  margin-top: 60px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.footer-email {
+  color: #8b8b8b;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  color: var(--text-primary);
+}
+
+/* icones de rede social (igual ao da home) */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: #919191;
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--text-primary);
+  background: #151515;
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.social-links img {
+  width: 18px;
+  height: 18px;
+  filter: invert(64%) opacity(0.9);
+  transition: filter 0.2s ease;
+}
+
+.social-links a:hover img {
+  filter: invert(100%);
+}
+
+/* telas de tablet */
+@media (max-width: 900px) {
+  .navbar {
+    width: min(calc(100% - 40px), 700px);
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .page {
+    width: min(calc(100% - 40px), 700px);
+    padding: 50px 0 70px;
+  }
+
+  .contact-card {
+    padding: 36px;
+  }
+
+  .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* telas de celular */
+@media (max-width: 650px) {
+  .navbar {
+    height: auto;
+    padding: 25px 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .contact-card {
+    padding: 26px;
+    border-radius: 18px;
+  }
+
+  .mad-lib input {
+    width: clamp(120px, 60vw, 240px);
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
