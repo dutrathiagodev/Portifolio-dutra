@@ -18,7 +18,8 @@
 
 Portfólio pessoal desenvolvido com **HTML, CSS e JavaScript puro** (sem
 frameworks e sem build), em tema escuro. Cada seção é uma página estática
-própria, com seu próprio CSS e JS.
+própria, com seu próprio CSS. O JS de navegação é compartilhado entre todas
+as páginas; só a página de contato tem um script próprio, para o formulário.
 
 ## Estrutura
 
@@ -29,6 +30,8 @@ experiencia/experiencia.html   trajetoria profissional
 projetos/projetos.html   projetos desenvolvidos
 skills/skills.html       tecnologias e competencias
 contato/contato.html     formulario de contato
+contato/contato.js       logica do formulario de contato
+js/nav.js                destaque do item ativo no menu (compartilhado)
 img/                     imagens e favicon
 ```
 
