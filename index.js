@@ -10,8 +10,3 @@ navLinks.forEach((link) => {
   }
 });
 
-const logo = document.querySelector(".logo");
-
-logo.addEventListener("click", () => {
-  console.log("Returning to home");
-});
